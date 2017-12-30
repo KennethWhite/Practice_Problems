@@ -14,19 +14,20 @@ class Process {
         neededC = resourceInfo[5];
     }
 
-    public boolean canRun(int availableRes[]) {
+    boolean canRun(int availableRes[]) {
         return resA + availableRes[0] >= neededA &&
                 resB + availableRes[1] >= neededB &&
                 resC + availableRes[2] >= neededC;
     }
 
-    public void run(int availableRes[]) {
+    //Modifies parameter int[]
+    void run(int availableRes[]) {
         availableRes[0] += resA;
         availableRes[1] += resB;
         availableRes[2] += resC;
     }
 
-    public void setPID(int pid) {
+    void setPID(int pid) {
         this.PID = pid;
     }
 
@@ -36,7 +37,6 @@ class Process {
 
     @Override
     public String toString(){
-        String.format("(%d, %d, %d)", neededA, neededB, neededC);
         return "P" + this.PID + String.format("(%d, %d, %d) ", neededA, neededB, neededC);
     }
 }//Class

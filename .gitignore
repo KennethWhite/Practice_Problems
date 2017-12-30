@@ -1,0 +1,5 @@
+*.xml
+*.iml
+*.class
+Banker's_Algorithm/out/production/Banker's_Algorithm/input.txt
+Banker's_Algorithm/out/production/Banker's_Algorithm/input2.txt
