@@ -30,9 +30,12 @@ public class StringPermutationCompare {
     }
 
     public static void testCheckPermArrays(String... args){
+        String s1, s2;
         System.out.printf("\n\nTesting if string1 is permutation of string2 (Array Impl.)\n");
         for(int index = 0; index +1 < args.length; index+=2){
-            System.out.printf("\nCase '%s, %s': %s", args[index], args[index+1], checkPermArrays(args[index], args[index+1]));
+            s1 = args[index];
+            s2 = args[index+1];
+            System.out.printf("\nCase '%s, %s': %s", s1, s2, checkPermArrays(s1,s2));
         }
     }
 
